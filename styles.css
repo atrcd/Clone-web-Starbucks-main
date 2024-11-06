@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+@media (max-width:900px){
+    body{
+        overflow-y: scroll;
+    }
+}
+
+.center {
+    display: flex;
+    width: 100%;
+    max-width: 90vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.menu a {
+    color: rgb(0, 71, 0);
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+.menu a:hover{
+    transition: 0.5s;
+    text-decoration: underline;
+    color: #e6e0d9;
+}
+
+@media (max-width: 714px) {
+    .menu a {
+        display: none;
+    }
+}
+
+.circle-background {
+    background-color: rgb(37, 107, 37);
+    height: 1500px;
+    width: 80%;
+    border-radius: 50%;
+    position: absolute;
+    left: 60vw;
+    top: 14vw;
+}
+
+@media (max-width: 1325px) {
+    .circle-background {
+        display: none;
+    }
+}
+.botao:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+/* Animação após o hover */
+.botao.finalizado {
+    animation: mudarCor 1s forwards;
+}
+
+/* Definindo a animação */
+@keyframes mudarCor {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.informations-content {
+    padding: 50px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 5rem;
+}
+
+.informations-items h1,
+.informations-items h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+}
+
+.informations-items h2 span {
+    font-size: 4rem;
+    color: rgb(37, 107, 37);
+}
+
+.informations-items p {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.informations-items button {
+    margin-top: 20px;
+    padding: 20px;
+    width: 30%;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgb(37, 107, 37);
+    border: none;
+    border-radius: 50px;
+}
+.informations-items button:hover{
+    background-color: rgb(1, 78, 1);
+    transition: 0.5s;
+}
+
+.icons {
+    position: absolute;
+    bottom: 42%;
+    right: 30px;
+}
+
+@media (max-width: 900px) {
+    .icons {
+        display: none;
+    }
+}
+
+.icons img {
+    display: flex;
+    margin: 20px auto;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 900px) {
+    footer {
+        display: none;
+    }
+}
+
+div.images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+}
+div.images img:hover{
+   transition: 1s;
+    transform: translateY(-20px);
+}
+
+.side-bar-img img {
+    display: block;
+    margin: auto;
+}
+
+.side-bar .menu-bar a {
+    color: rgb(37, 107, 37);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.side-bar .menu-bar a:hover {
+    color: #fff;
+}
+
+.menu-bar {
+    margin-top: 10px;
+    position: absolute;
+    right: 3rem;
+    background-color: #e6e0d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px 40px;
+    border-radius: 10px;
+    display: none;
+    animation: aniSide 2s both;
+}
+
+.menu-bar img {
+    display: block;
+    margin: auto;
+}
+
+@keyframes aniSide {
+    from {
+        transform: translateX(250px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+.side-bar {
+    display: none;
+}
+
+@media (max-width: 714px) {
+    .side-bar {
+        display: block;
+    }
+}
+
+.hide-element {
+    animation: fadeOutSlideDown 1s both; /* Duração de 0.5s, 'forwards' mantém o estado final */
+}
+
+@keyframes fadeOutSlideDown {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform: translateX(250px);
+    }
+}
+
+.images-nav {
+    display: none;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 3rem;
+}
+
+@media (max-width: 900px) {
+    .images-nav {
+        display: flex;
+    }
+}
+
+.container-starbucks {
+    width: 100%;
+    display: none;
+}
+
+.container-starbucks img {
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 900px) {
+    .container-starbucks {
+        display: block;
+    }
+}
+
+.contain-icons {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    gap: 3rem;
+    padding: 10px;
+    margin-top: 2rem;
+    background-color: #e6e0d9;
+}
+
+@media (max-width: 890px) {
+    .contain-icons {
+        display: flex;
+    }
+}
